@@ -1,0 +1,11 @@
+[key_value_store.azure]
+type = "azure_cosmos"
+# the unique name of your CosmosDB account (https:// >>>> THIS >>> cosmos-spin <<<< THIS <<<.documents.azure.com:443/)
+account = "cosmos-spin"
+# Find the key using the Keys blade from within your CosmosDB Account
+key = "<<YOUR_ACCESS_KEY_HERE>>"
+# Look for the "Database ID" in your Azure CosmosDB Account
+database = "sample_database"
+# Look for the "Container ID" in your Azure CosmosDB Account
+# The container must be created with the partition key set to /id
+container = "value_container"

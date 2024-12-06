@@ -1,0 +1,20 @@
+spin_manifest_version = 2
+
+[application]
+name = "kv-demo"
+version = "0.1.0"
+authors = ["Thorsten Hans <thorsten.hans@fermyon.com>"]
+description = ""
+
+[[trigger.http]]
+route = "/..."
+component = "kv-demo"
+
+[component.kv-demo]
+source = "target/wasm32-wasi/release/kv_demo.wasm"
+allowed_outbound_hosts = []
+key_value_stores = ["azure"]
+
+[component.kv-demo.build]
+command = "cargo build --target wasm32-wasi --release"
+watch = ["src/**/*.rs", "Cargo.toml"]

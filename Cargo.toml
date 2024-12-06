@@ -1,0 +1,17 @@
+[package]
+name = "kv-demo"
+authors = ["Thorsten Hans <thorsten.hans@fermyon.com>"]
+description = ""
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+anyhow = "1.0.94"
+serde = { version = "1.0.215", features = ["derive"] }
+serde_json = "1.0.133"
+spin-sdk = "3.1.0"
+
+[workspace]
